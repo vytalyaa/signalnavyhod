@@ -41,6 +41,27 @@ header
     
 }
 
+.logo
+{
+
+    display: flex;
+
+}
+
+.buttons
+{
+
+    display: flex;
+
+}
+
+.login
+{
+
+    display: flex;
+
+}
+
 #logo
 {
 
@@ -52,12 +73,28 @@ header
 .head-span 
 {
 
-    margin-left: 400px;
-    margin-right: 260px;
-    margin-top: 68px;
     display: flex;
     list-style-type: none;
+    padding: 0;
     
+}
+
+#head-span-item
+{
+
+    display: flex;
+    width: 180px;
+    height: 180px;
+    align-items: center;
+    margin-right: 180px;
+
+    background-image: linear-gradient(#00913E, #00913E);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 5px;
+
+    transition: .3s;
+
 }
 
 #home-link 
@@ -65,9 +102,7 @@ header
 
     text-decoration: none;
 
-    max-width: 180px;
-    max-height: 180px;
-    margin-right: 180px;
+    margin-left: 29px;
 
     font-family: 'Impact';
     font-style: normal;
@@ -85,9 +120,7 @@ header
 
     text-decoration: none;
 
-    max-width: 180px;
-    max-height: 180px;
-    margin-right: 180px;
+    margin-left: 50px;
 
     font-family: 'Impact';
     font-style: normal;
@@ -96,25 +129,6 @@ header
     line-height: 43px;
 
     color: #000;
-
-}
-
-#merch-link:hover 
-{
-
-    text-decoration: none;
-
-    max-width: 180px;
-    max-height: 180px;
-
-    font-family: 'Impact';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 43px;
-
-    color: #00913E;
-    text-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
 
 }
 
@@ -123,9 +137,7 @@ header
 
     text-decoration: none;
 
-    max-width: 180px;
-    max-height: 180px;
-    margin-right: 180px;
+    margin-left: 13px;
 
     font-family: 'Impact';
     font-style: normal;
@@ -137,29 +149,12 @@ header
 
 }
 
-#concerts-link:hover 
-{
-
-    text-decoration: none;
-
-    max-width: 180px;
-    max-height: 180px;
-
-    font-family: 'Impact';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 43px;
-
-    color: #00913E;
-    text-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
-
-}
-
 .login
 {
 
-    margin-top: 68px;
+    width: 180px;
+    height: 180px;
+    align-items: center;
 
 }
 
@@ -168,9 +163,7 @@ header
 
     text-decoration: none;
 
-    max-width: 180px;
-    max-height: 180px;
-    margin-right: 180px;
+    margin-left: 53px;
 
     font-family: 'Impact';
     font-style: normal;
@@ -187,9 +180,6 @@ header
 
     text-decoration: none;
 
-    max-width: 180px;
-    max-height: 180px;
-
     font-family: 'Impact';
     font-style: normal;
     font-weight: 400;
@@ -201,67 +191,109 @@ header
 
 }
 
-#home-link::before
+#head-span-item:hover
 {
 
-    margin-left: 593px;
-    content: "";
+    background-size: 100% 5px;
+
+}
+
+#head-span-item:hover a 
+{
+
+    text-decoration: none;
+
+    color: #00913E;
+    text-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
+
+}
+
+.slider-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+  
+.slider 
+{
+    width: 100%;
+    max-width: 1740px;
+    max-height: 450px;
+    margin: 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+}
+  
+.slides {
+
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 50px;
+
+}
+  
+.slide
+{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 400px;
+    scroll-snap-align: center;
+    margin-right: 0px;
+    box-sizing: border-box;
+    background: white;
+    transform-origin: center center;
+    transform: scale(1);
+}
+  
+.slide a 
+{
+
+    background: none;
+    border: none;
+
+}
+  
+.slider__nav 
+{
+
+    box-sizing: border-box;
     position: absolute;
-    left: 0;
     bottom: 0;
-    width: 180px;
-    height: 5px;
-    background-color: #00913E;
-    box-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    text-align: center;
 
 }
-
-#merch-link::before
+  
+.slider__navlink 
 {
 
-    margin-left: 873px;
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 180px;
-    height: 5px;
-    background-color: #00913E;
-    box-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
-    opacity: 0%;
-    transition: opacity 0.15s;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #00913E;
+    margin: 0 10px 0 10px;
 
 }
 
-#merch-link:hover:before
+.slider__navlink
 {
 
-    opacity: 100%;
-    transition: opacity 0.15s;
+    background: rgba(0, 145, 62, 0.3);
 
 }
-
-#concerts-link::before
-{
-
-    margin-left: 1166px;
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 180px;
-    height: 5px;
-    background-color: #00913E;
-    box-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
-    opacity: 0%;
-    transition: opacity 0.15s;
-
-}
-
-#concerts-link:hover:before
-{
-
-    opacity: 100%;
-    transition: opacity 0.15s;
-
-}
+  
