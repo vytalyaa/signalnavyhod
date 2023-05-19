@@ -23,6 +23,7 @@ header
 .head
 {
 
+    height: 100%;
     max-height: 180px;
     width: 100%;
 
@@ -31,13 +32,40 @@ header
 
     margin-bottom: 90px;
 
+
+
 }
 
 .nav 
 {
 
     position: relative;
-    display: flex;  
+    display: flex; 
+    width: 100%; 
+    justify-content: space-between;
+    
+}
+
+.logo
+{
+
+    display: flex;
+
+}
+
+.buttons
+{
+
+    display: flex;
+    justify-content: center;
+    max-width: 1300px;
+
+}
+
+.login
+{
+
+    display: flex;
     
 }
 
@@ -52,31 +80,28 @@ header
 .head-span 
 {
 
-    margin-left: 400px;
-    margin-right: 260px;
-    margin-top: 68px;
     display: flex;
     list-style-type: none;
+    padding: 0;
     
 }
 
-#merch-link 
+#head-span-item
 {
 
-    text-decoration: none;
+    display: flex;
+    width: 180px;
+    height: 180px;
+    align-items: center;
+    margin-right: 90px;
+    margin-left: 90px;
 
-    max-width: 180px;
-    max-height: 180px;
-    margin-right: 180px;
+    background-image: linear-gradient(#00913E, #00913E);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 5px;
 
-    font-family: 'Impact';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 43px;
-
-    color: #00913E;
-    text-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
+    transition: .3s ease;
 
 }
 
@@ -85,9 +110,7 @@ header
 
     text-decoration: none;
 
-    max-width: 180px;
-    max-height: 180px;
-    margin-right: 180px;
+    margin-left: 29px;
 
     font-family: 'Impact';
     font-style: normal;
@@ -99,13 +122,12 @@ header
 
 }
 
-#home-link:hover 
+#merch-link 
 {
 
     text-decoration: none;
 
-    max-width: 180px;
-    max-height: 180px;
+    margin-left: 50px;
 
     font-family: 'Impact';
     font-style: normal;
@@ -123,9 +145,7 @@ header
 
     text-decoration: none;
 
-    max-width: 180px;
-    max-height: 180px;
-    margin-right: 180px;
+    margin-left: 13px;
 
     font-family: 'Impact';
     font-style: normal;
@@ -137,29 +157,12 @@ header
 
 }
 
-#concerts-link:hover 
-{
-
-    text-decoration: none;
-
-    max-width: 180px;
-    max-height: 180px;
-
-    font-family: 'Impact';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 43px;
-
-    color: #00913E;
-    text-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
-
-}
-
 .login
 {
 
-    margin-top: 68px;
+    width: 180px;
+    height: 180px;
+    align-items: center;
 
 }
 
@@ -168,9 +171,7 @@ header
 
     text-decoration: none;
 
-    max-width: 180px;
-    max-height: 180px;
-    margin-right: 180px;
+    margin-left: 53px;
 
     font-family: 'Impact';
     font-style: normal;
@@ -187,9 +188,6 @@ header
 
     text-decoration: none;
 
-    max-width: 180px;
-    max-height: 180px;
-
     font-family: 'Impact';
     font-style: normal;
     font-weight: 400;
@@ -201,67 +199,248 @@ header
 
 }
 
-#merch-link::before
+#head-span-item:hover
 {
 
-    margin-left: 873px;
-    content: "";
+    background-size: 100% 5px;
+
+}
+
+#head-span-item:hover a 
+{
+
+    text-decoration: none;
+
+    color: #00913E;
+    text-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
+
+}
+
+.slider-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+  
+.slider 
+{
+    width: 100%;
+    max-width: 1740px;
+    max-height: 450px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+}
+  
+.slides {
+
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 50px;
+
+}
+  
+.slide
+{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 450px;
+    scroll-snap-align: center;
+    margin-right: 0px;
+    box-sizing: border-box;
+    background: white;
+    transform-origin: center center;
+    transform: scale(1);
+
+}
+
+.slide img
+{
+
+    width: 100%;
+    height: 100%;
+
+}
+  
+.slide a 
+{
+
+    background: none;
+    border: none;
+
+}
+  
+.slider__nav 
+{
+
+    box-sizing: border-box;
     position: absolute;
-    left: 0;
     bottom: 0;
-    width: 180px;
-    height: 5px;
-    background-color: #00913E;
-    box-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    text-align: center;
+
+}
+  
+.slider__navlink 
+{
+
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: rgba(0, 145, 62, 0.3);
+    margin: 0 10px 0 10px;
+    transition: all .3s ease;
 
 }
 
-#home-link::before
+.slider__navlink:hover
 {
 
-    margin-left: 593px;
-    content: "";
+    background: #00913E;
+    transform: scale(1.1);
+
+}
+
+footer
+{
+
+    display: flex;
+
+}
+
+.foot
+{
+
+    margin-top: 90px;
+
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    background: #000;
+    align-items: center;
+
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+
+}
+
+.down
+{
+
+    display: flex;
+    align-items: center;
+
+}
+
+.exitsignal
+{
+
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+
+    color: #FFFFFF;
+    
+}
+
+.support
+{
+
+    text-decoration: none;
+
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+
+    color: #FFFFFF;
+
+    transition: .3s ease;
+    
+}
+
+.footer-text-block
+{
+
+    display: flex;
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 180px;
-    height: 5px;
-    background-color: #00913E;
-    box-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
-    opacity: 0%;
-    transition: opacity 0.15s;
+    right: 90px;
 
 }
 
-#home-link:hover:before
+.footer-text-list 
 {
 
-    opacity: 100%;
-    transition: opacity 0.15s;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.footer-text
+{
+
+    margin-right: 90px;
 
 }
 
-#concerts-link::before
+.support:hover
 {
 
-    margin-left: 1166px;
-    content: "";
+    text-decoration: none;
+
+    color: #00913E;
+    text-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
+
+}
+
+.footer-icon-block
+{
+
+    display: flex;
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 180px;
-    height: 5px;
-    background-color: #00913E;
-    box-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
-    opacity: 0%;
-    transition: opacity 0.15s;
+    left: 0px;
 
 }
 
-#concerts-link:hover:before
+.footer-icon-list 
 {
 
-    opacity: 100%;
-    transition: opacity 0.15s;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.footer-icon
+{
+
+    margin-left: 90px;
+
+    transition: .3s ease;
+
+}
+
+.footer-icon:hover g
+{
+
+    fill: #00913E;
+    box-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
 
 }
