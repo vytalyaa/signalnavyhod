@@ -265,6 +265,14 @@ header
     transform-origin: center center;
 
     transform: scale(1);
+    transition: 500ms ease;
+
+}
+
+.slide:hover
+{
+
+    transform: scale(1.025);
 
 }
 
