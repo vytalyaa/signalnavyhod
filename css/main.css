@@ -3,6 +3,7 @@
 
     margin: 0;
     box-sizing: border-box;
+    z-index: 1;
 
 }
 
@@ -164,8 +165,20 @@ header
 
 }
 
-#login-button
+.login-button
 {
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+
+    cursor: pointer;
+
+    padding: 0;
 
     text-decoration: none;
 
@@ -181,7 +194,7 @@ header
 
 }
 
-#login-button:hover 
+.login-button:hover 
 {
 
     text-decoration: none;
@@ -220,6 +233,8 @@ header
     align-items: center;
     justify-content: center;
     height: 100%;
+    user-select: none;
+    touch-action: pan-y;
 
 }
   
@@ -281,6 +296,7 @@ header
 
     width: 100%;
     height: 100%;
+    pointer-events: none;
 
 }
   
@@ -349,7 +365,6 @@ header
     overflow: hidden;
     position: relative;
     justify-content: start;
-    background: url(music-bg.jpg) no-repeat center top / cover;
 
 }
 
@@ -587,5 +602,227 @@ footer
 
     fill: #00913E;
     box-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
+
+}
+
+.language
+{
+
+    text-decoration: none;
+
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+
+    color: #FFFFFF;
+
+    transition: .3s ease;
+
+}
+
+.language:hover
+{
+
+    color: #00913E;
+    text-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
+
+}
+
+.popup
+{
+
+    z-index: 3;
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 43px;
+
+    color: #000;
+
+    position: fixed;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    padding: 20px 30px;  
+    
+    width: 500px;
+    height: 480px;
+
+    transition: top 0ms ease-in-out 0ms;
+    transition: opacity 200ms ease-in-out 0ms;
+
+}
+
+.active
+{
+
+    z-index: 3;
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 43px;
+
+    color: #000;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    padding: 20px 30px;  
+    
+    width: 500px;
+    height: 480px;
+
+    transition: top 0ms ease-in-out 0ms;
+    transition: opacity 200ms ease-in-out 0ms;
+
+}
+
+.close-btn
+{
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 100ms ease;
+
+}
+
+.close-btn:hover
+{
+
+    color: #00913E;
+
+}
+
+.auth p
+{
+
+    text-align: center;
+    margin: 10px 0px 20px;
+
+}
+
+.auth .auth-element
+{
+
+    margin: 15px 0px;
+
+}
+
+.auth .auth-element label
+{
+
+    font-size: 20px;
+
+}
+
+.auth .auth-element input[type="text"],
+.auth .auth-element input[type="password"]
+{
+
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px;
+    font-family: 'Impact';
+    font-style: normal;
+    font-size: 15px;
+
+}
+
+.auth .auth-element .signin, .signup
+{
+
+    width: 100%;
+    height: 49px;
+    border: none;
+    outline: none;
+    background: #00913E;
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 100ms ease;
+
+}
+
+.auth .auth-element .signin:hover, .signup:hover
+{
+
+    background: #fff;
+    color: #00913E;
+    text-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
+
+}
+
+.auth .auth-element .forgot
+{
+
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    text-decoration: none;
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 43px;
+    color: #000;
+    cursor: pointer;
+    transition: 100ms ease;
+
+}
+
+.auth .auth-element .forgot:hover
+{
+
+    color: #00913E;
+
+}
+
+.black-bg
+{
+
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: -150%;
+    background: #000;
+    opacity: 0;
+    transition: top 0ms ease-in-out 0ms;
+    transition: opacity 200ms ease-in-out 0ms;
+
+}
+
+.active-bg
+{
+
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    top: 0;
+    transition: top 0ms ease-in-out 0ms;
+    transition: opacity 200ms ease-in-out 0ms;
 
 }
