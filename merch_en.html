@@ -8,83 +8,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>сигнал на выход</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/merch.css">
 
 </head>
 
 <body>
 
-    <div class="popup">
-
-        <div class="close-btn" id="clsbtn">&times;</div>
-
-        <script>
-                    
-            function openAuth(){
-
-                document.querySelector(".active").classList.add("popup");
-                document.querySelector(".active").classList.remove("active");
-                document.querySelector(".active-bg").classList.add("black-bg");
-                document.querySelector(".active-bg").classList.remove("active-bg");
-
-            }
-
-            clsbtn.addEventListener("click", openAuth);
-
-        </script>
-
-        <div class="auth">
-
-            <p class="auth-text">sign in</p>
-    
-            <div class="auth-element">
-    
-                <input type="text" id="email" placeholder="enter email">
-    
-            </div>
-    
-            <div class="auth-element">
-    
-                <input type="password" id="password" placeholder="enter password">
-    
-            </div>
-    
-            <div class="auth-element">
-    
-                <input type="checkbox" id="remember-me">
-                <label for="remember-me">remember me</label>
-    
-            </div>
-    
-            <div class="auth-element">
-    
-                <button class="signin">sign in</button>
-    
-            </div>
-
-            <div class="auth-element">
-    
-                <button class="signup">sign up</button>
-    
-            </div>
-    
-            <div class="auth-element">
-    
-                <a target="_blank" href="#" class="forgot">forgot password?</a>
-    
-            </div>
-    
-        </div>
-
-    </div>
-
-    <div class="black-bg"></div>
-
     <header class="head">
 
         <nav class="nav">
 
-            <div class="logo">
+            <div class="log">
 
                 <a href="index_ru.html">
 
@@ -93,7 +27,7 @@
                 </a>
 
             </div>
-                    
+            
             <div class="buttons">
 
                 <ul class="head-span">
@@ -119,25 +53,10 @@
                 </ul>
 
             </div>  
-                    
+            
             <div class="login">
 
-                <button class="login-button" id="button1">sign in</button>
-
-                <script>
-                    
-                    function openAuth(){
-
-                        document.querySelector(".popup").classList.add("active");
-                        document.querySelector(".popup").classList.remove("popup");
-                        document.querySelector(".black-bg").classList.add("active-bg");
-                        document.querySelector(".black-bg").classList.remove("black-bg");
-
-                    }
-
-                    button1.addEventListener("click", openAuth);
-
-                </script>
+                <a href="#" id="login-button">sign in</a>
 
             </div>
 
@@ -163,7 +82,7 @@
 
                         <div class="slide">
 
-                            <a target="_blank" href="https://b-a-m-promotion.timepad.ru/event/2426971/"><img class="slide__text" src="source/фото2.png" alt=""></a>
+                            <a target="_blank" href="https://vk.com/event220687777"><img class="slide__text" src="source/фото2.png" alt=""></a>
 
                         </div>
 
@@ -184,55 +103,6 @@
                 </div>
                 
               </div>
-
-        </section>
-
-        <section class="music_section">
-
-            <div class="music-container">
-
-                <div class="music">
-
-                    <img src="source/обложка.jpeg" width="450px" height="450px" alt="">
-
-                    <ul class="music-text">
-
-                        <li class="music-text-item">
-
-                            <p class="title">я живу в россии</p>
-
-                        </li>
-
-                        <li class="music-text-item2"></li>
-
-                            <a href="" class="artist">сигнал на выход</a>
-
-                        </li>
-
-                        <li class="music-text-item2">
-
-                            <p class="music-description">
-                                
-                                туду люди бляди <br>
-                                туду люди бляди <br>
-                                туду люди бляди <br>
-                                тудутудтудутуду
-
-                            </p>
-
-                        </li>
-
-                    </ul>
-
-                    <div class="listen-button">
-
-                        <a target="_blank" href="music.html" class="listen">listen</a>
-
-                    </div>
-
-                </div>
-
-            </div>
 
         </section>
 
@@ -304,7 +174,7 @@
 
                     </li>
 
-                    <li>
+                    <li class="footer-text"></li>
 
                         <p class="exitsignal">&copy; 2023 сигнал на выход</p>
 

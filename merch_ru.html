@@ -74,39 +74,30 @@
 
                     <div class="slides">
 
-                        <div id="slides__1" class="slide">
+                        <div class="slide">
 
-                            <img class="slide__text" src="source/фото1.png" alt="">
-
-                        </div>
-
-                        <div id="slides__2" class="slide">
-
-                            <img class="slide__text" src="source/фото2.png" alt="">
+                            <a target="_blank" href="music.html"><img class="slide__text" src="source/фото1.png" alt=""></a>
 
                         </div>
 
-                        <div id="slides__3" class="slide">
+                        <div class="slide">
 
-                            <img class="slide__text" src="source/фото3.png" alt="">
+                            <a target="_blank" href="https://vk.com/event220687777"><img class="slide__text" src="source/фото2.png" alt=""></a>
 
                         </div>
 
-                        <div id="slides__4" class="slide">
+                        <div class="slide">
 
-                            <img class="slide__text" src="source/фото4.png" alt="">
+                            <a target="_blank" href="https://vk.com/album-216033539_292844827"><img class="slide__text" src="source/фото3.png" alt=""></a>
+
+                        </div>
+
+                        <div class="slide">
+
+                            <a target="_blank" href=""><img class="slide__text" src="source/фото4.png" alt=""></a>
 
                         </div>
                         
-                    </div>
-
-                    <div class="slider__nav">
-
-                        <a class="slider__navlink" href="#slides__1"></a>
-                        <a class="slider__navlink" href="#slides__2"></a>
-                        <a class="slider__navlink" href="#slides__3"></a>
-                        <a class="slider__navlink" href="#slides__4"></a>
-
                     </div>
 
                 </div>
@@ -190,6 +181,14 @@
         </div>
 
     </footer>
+
+    <script src="script/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            new Slider(document.querySelector('.slider-container'));
+        });
+    </script>
 
 </body>
 
