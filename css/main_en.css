@@ -3,6 +3,7 @@
 
     margin: 0;
     box-sizing: border-box;
+    z-index: 1;
 
 }
 
@@ -17,6 +18,13 @@ header
 {
 
     display: flex;
+
+}
+
+.container
+{
+
+    justify-content: center;
 
 }
 
@@ -108,23 +116,6 @@ header
 
     text-decoration: none;
 
-    margin-left: 29px;
-
-    font-family: 'Impact';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 43px;
-
-    color: #000;
-
-}
-
-#merch-link 
-{
-
-    text-decoration: none;
-
     margin-left: 50px;
 
     font-family: 'Impact';
@@ -138,12 +129,29 @@ header
 
 }
 
+#merch-link 
+{
+
+    text-decoration: none;
+
+    margin-left: 43px;
+
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 43px;
+
+    color: #000;
+
+}
+
 #concerts-link 
 {
 
     text-decoration: none;
 
-    margin-left: 13px;
+    margin-left: 25px;
 
     font-family: 'Impact';
     font-style: normal;
@@ -164,8 +172,20 @@ header
 
 }
 
-#login-button
+.login-button
 {
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+
+    cursor: pointer;
+
+    padding: 0;
 
     text-decoration: none;
 
@@ -181,7 +201,7 @@ header
 
 }
 
-#login-button:hover 
+.login-button:hover 
 {
 
     text-decoration: none;
@@ -370,6 +390,156 @@ header
 
 }
 
+.music-container
+{
+
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+
+.music
+{
+
+    display: flex;
+    width: 100%;
+    max-width: 1740px;
+    max-height: 450px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    justify-content: start;
+    transform: scale(1);
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
+    transition: 500ms ease-in-out;
+
+}
+
+.music ul
+{
+
+    margin-top: 45px;
+
+}
+
+.music:hover
+{
+
+    transform: scale(1.025);
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.25);
+
+}
+
+.title
+{
+
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 75px;
+    line-height: 43px;
+
+}
+
+.artist
+{
+
+    text-decoration: none;
+
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 43px;
+    color: #000;
+    transition: .3s ease;
+
+}
+
+.artist:hover
+{
+
+    text-decoration: none;
+
+    color: #00913E;
+    text-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
+
+}
+
+.music-text
+{
+
+    margin-left: 45px;
+    list-style-type: none;
+    padding: 0;
+    text-align: start;
+
+}
+
+.music-text-item2
+{
+
+    margin-top: 45px;
+
+}
+
+.listen-button
+{
+
+    background: #00913E;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    transition: 500ms ease-in-out;
+
+}
+
+.listen-button:hover
+{
+
+    background: #FFFFFF;
+
+}
+
+.listen
+{
+
+    text-decoration: none;
+
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 43px;
+    color: #FFFFFF;
+
+}
+
+.listen:hover
+{
+
+    text-decoration: none;
+
+    color: #00913E;
+    text-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
+
+}
+
+.music-description
+{
+
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+
+}
+
 footer
 {
 
@@ -397,31 +567,6 @@ footer
 
     display: flex;
     align-items: center;
-
-}
-
-.language
-{
-
-    text-decoration: none;
-
-    font-family: 'Impact';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 43px;
-
-    color: #FFFFFF;
-
-    transition: .3s ease;
-
-}
-
-.language:hover
-{
-
-    color: #00913E;
-    text-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
 
 }
 
@@ -550,100 +695,122 @@ footer
 
 }
 
-.merch-section
+.popup
 {
 
-    display: flex;
-    width: 100%;
+    z-index: 4;
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 43px;
 
-}
+    color: #000;
 
-.merch-block
-{
-
-    margin-top: 90px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-
-}
-
-.merch-row
-{
-
-    display: flex;
-
-}
-
-.merch-item
-{
-
+    position: fixed;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    padding: 20px 30px;  
+    
     width: 500px;
-    height: 685px;
-    margin-right: 45px;
-    margin-left: 45px;
-    transform: scale(1);
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
-    transition: 500ms ease-in-out;
-    padding: 45px;
+    height: 480px;
+
+    transition: top 0ms ease-in-out 0ms;
+    transition: opacity 200ms ease-in-out 0ms;
 
 }
 
-.merch-img
+.active
+{
+
+    z-index: 3;
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 43px;
+
+    color: #000;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    padding: 20px 30px;  
+    
+    width: 500px;
+    height: 480px;
+
+    transition: top 0ms ease-in-out 0ms;
+    transition: opacity 200ms ease-in-out 0ms;
+
+}
+
+.close-btn
 {
 
     position: absolute;
-    top: 5px;
-    width: 400px;
-    height: 400px;
+    top: 10px;
+    right: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 100ms ease;
 
 }
 
-.merch-item-link
+.close-btn:hover
 {
 
-    text-decoration: none;
+    color: #00913E;
 
 }
 
-.merch-item-text
+.auth p
 {
 
-    text-decoration: none;
+    text-align: center;
+    margin: 10px 0px 20px;
 
+}
+
+.auth .auth-element
+{
+
+    margin: 15px 0px;
+
+}
+
+.auth .auth-element label
+{
+
+    font-size: 20px;
+
+}
+
+.auth .auth-element input[type="text"],
+.auth .auth-element input[type="password"]
+{
+
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px;
     font-family: 'Impact';
     font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 43px;
-
-    color: #000;
-
-    margin-bottom: 20px;
+    font-size: 15px;
 
 }
 
-.merch-item-price
+.auth .auth-element .signin, .signup
 {
 
-    text-decoration: none;
-
-    font-family: 'Impact';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 43px;
-
-    color: #000;
-
-    margin-bottom: 20px;
-
-}
-
-.merch-item-buy
-{
-
-    transform: translate(0%, 44%);
     width: 100%;
     height: 49px;
     border: none;
@@ -660,34 +827,67 @@ footer
 
 }
 
-.merch-item-buy:hover
+.auth .auth-element .signin:hover, .signup:hover
 {
 
     background: #fff;
     color: #00913E;
+    text-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
 
 }
 
-.merch-item:hover .merch-item-text
+.auth .auth-element .forgot
 {
 
-    transition: 500ms ease-in-out;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    text-decoration: none;
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 43px;
+    color: #000;
+    cursor: pointer;
+    transition: 100ms ease;
+
+}
+
+.auth .auth-element .forgot:hover
+{
+
     color: #00913E;
 
 }
 
-.merch-item-img
+.black-bg
 {
 
-    width: 400px;
-    height: 400px;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    top: -150%;
+    background: #000;
+    opacity: 0;
+    transition: top 0ms ease-in-out 0ms;
+    transition: opacity 200ms ease-in-out 0ms;
 
 }
 
-.merch-item:hover
+.active-bg
 {
 
-    transform: scale(1.025);
-    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    top: 0;
+    transition: top 0ms ease-in-out 0ms;
+    transition: opacity 200ms ease-in-out 0ms;
 
 }

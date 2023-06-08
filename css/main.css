@@ -134,7 +134,7 @@ header
 
     text-decoration: none;
 
-    margin-left: 50px;
+    margin-left: 49px;
 
     font-family: 'Impact';
     font-style: normal;
@@ -270,7 +270,6 @@ header
     position: relative;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    padding-bottom: 50px;
     transition: 500ms ease-in-out;
 
 }
@@ -412,6 +411,24 @@ header
     overflow: hidden;
     position: relative;
     justify-content: start;
+    transform: scale(1);
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
+    transition: 500ms ease-in-out;
+
+}
+
+.music ul
+{
+
+    margin-top: 45px;
+
+}
+
+.music:hover
+{
+
+    transform: scale(1.025);
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.25);
 
 }
 
@@ -476,7 +493,7 @@ header
     bottom: 0;
     right: 0;
     padding: 20px;
-    transition: .3s ease;
+    transition: 500ms ease-in-out;
 
 }
 
@@ -805,7 +822,7 @@ footer
     line-height: 43px;
     color: #FFFFFF;
     cursor: pointer;
-    transition: 100ms ease;
+    transition: 500ms ease;
 
 }
 

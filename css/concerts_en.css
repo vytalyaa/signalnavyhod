@@ -110,7 +110,7 @@ header
 
     text-decoration: none;
 
-    margin-left: 29px;
+    margin-left: 50px;
 
     font-family: 'Impact';
     font-style: normal;
@@ -118,7 +118,8 @@ header
     font-size: 35px;
     line-height: 43px;
 
-    color: #000;
+    color: #00913E;
+    text-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
 
 }
 
@@ -127,7 +128,7 @@ header
 
     text-decoration: none;
 
-    margin-left: 50px;
+    margin-left: 43px;
 
     font-family: 'Impact';
     font-style: normal;
@@ -144,7 +145,7 @@ header
 
     text-decoration: none;
 
-    margin-left: 13px;
+    margin-left: 25px;
 
     font-family: 'Impact';
     font-style: normal;
@@ -152,8 +153,7 @@ header
     font-size: 35px;
     line-height: 43px;
 
-    color: #00913E;
-    text-shadow: 0px 0px 10px rgba(0, 145, 62, 0.5);
+    color: #000;
 
 }
 
