@@ -1,3 +1,16 @@
+<?php
+
+    $get = $_GET['get'];
+
+    if($get == 1)
+    {
+
+        echo '<script src="script/login.js" defer></script>';
+
+    }
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="ru">
@@ -8,7 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>сигнал на выход</title>
-    <link rel="stylesheet" href="css/main_en.css">
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 
@@ -35,44 +48,48 @@
 
         <div class="auth">
 
-            <p class="auth-text">sign in</p>
-    
-            <div class="auth-element">
-    
-                <input type="text" id="email" placeholder="enter email">
-    
-            </div>
-    
-            <div class="auth-element">
-    
-                <input type="password" id="password" placeholder="enter password">
-    
-            </div>
-    
-            <div class="auth-element">
-    
-                <input type="checkbox" id="remember-me">
-                <label for="remember-me">remember me</label>
-    
-            </div>
-    
-            <div class="auth-element">
-    
-                <button class="signin">sign in</button>
-    
-            </div>
+            <form action="auth.php" method="post">
 
-            <div class="auth-element">
+                <p class="auth-text">вход</p>
     
-                <button class="signup">sign up</button>
+                <div class="auth-element">
+        
+                    <input name="userLog" type="text" id="email" placeholder="введите почту">
+        
+                </div>
+        
+                <div class="auth-element">
+        
+                    <input name="userPass" type="password" id="password" placeholder="введите пароль">
+        
+                </div>
+        
+                <div class="auth-element">
+        
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">запомнить</label>
+        
+                </div>
+        
+                <div class="auth-element">
+        
+                    <input class="signin" type="submit" value="войти">
+        
+                </div>
     
-            </div>
-    
-            <div class="auth-element">
-    
-                <a target="_blank" href="#" class="forgot">forgot password?</a>
-    
-            </div>
+                <div class="auth-element">
+        
+                    <button class="signup">регистрация</button>
+        
+                </div>
+        
+                <div class="auth-element">
+        
+                    <a target="_blank" href="#" class="forgot">забыли пароль?</a>
+        
+                </div>
+
+            </form>
     
         </div>
 
@@ -86,7 +103,7 @@
 
             <div class="logo">
 
-                <a href="index_en.html">
+                <a href="index_ru.html">
 
                     <img id="logo" src="source/exit.jpg" alt="☻">
 
@@ -100,19 +117,19 @@
 
                     <li id="head-span-item">
 
-                        <a id="home-link" href="index_en.html">main</a>
+                        <a id="home-link" href="index_ru.html">главная</a>
 
                     </li>
 
                     <li id="head-span-item">
 
-                        <a id="merch-link" href="merch_en.html">merch</a>
+                        <a id="merch-link" href="merch_ru.html">мерч</a>
 
                     </li>
 
                     <li id="head-span-item">
 
-                        <a id="concerts-link" href="concerts_en.html">concerts</a>
+                        <a id="concerts-link" href="concerts_ru.html">концерты</a>
 
                     </li>
 
@@ -122,7 +139,7 @@
                     
             <div class="login">
 
-                <button class="login-button" id="button1">sign in</button>
+                <button class="login-button" id="button1">вход</button>
 
                 <script>
                     
@@ -213,8 +230,8 @@
 
                             <p class="music-description">
                                 
-                                our fisrst single out now!<br>
-                                listen on all streaming services
+                                у нас вышел первый сингл!<br>
+                                слушайте на всех площадках
 
                             </p>
 
@@ -224,7 +241,7 @@
 
                     <div class="listen-button">
 
-                        <a target="_blank" href="music.html" class="listen">listen</a>
+                        <a target="_blank" href="music.html" class="listen">слушать</a>
 
                     </div>
 
@@ -292,13 +309,13 @@
 
                     <li class="footer-text">
 
-                        <a href="index_ru.html" class="language">ru</a>
+                        <a href="index_en.html" class="language">en</a>
 
                     </li>
 
                     <li class="footer-text">
 
-                        <a href="" class="support">support</a>
+                        <a href="" class="support">поддержка</a>
 
                     </li>
 
